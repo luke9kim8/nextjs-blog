@@ -4,7 +4,7 @@ import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 
-const name = 'Your Name'
+const name = 'Global Literature'
 export const siteTitle = 'Next.js Sample Website'
 
 export default function Layout({ children, home }) {
@@ -28,15 +28,26 @@ export default function Layout({ children, home }) {
       <header className={styles.header}>
         {home ? (
           <>
-            <Image
+            {/* <Image
               priority
               src="/images/profile.jpg"
               className={utilStyles.borderCircle}
               height={144}
               width={144}
               alt={name}
-            />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            /> */}
+            <h1 className={styles.title}>{name}</h1>
+                
+            <nav className={styles.header_nav}>
+                <ul className={styles.container_list}>
+                    <li className={styles.container_line}>About</li>
+                    <li className={styles.container_line}>All Posts</li>
+                    <li className={styles.container_line}>Category A</li>
+                    <li className={styles.container_line}>Category B</li>
+                    <li className={styles.container_line}>Category C</li>
+                    
+                </ul>
+            </nav>
           </>
         ) : (
           <>
